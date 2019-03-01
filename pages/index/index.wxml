@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" autoplay='true' indicator-dots='true' indicator-active-color='#fff'>
+    <block wx:for="{{imgUrls}}" wx:key="{{ index }}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='list'>
+    <view class='h1'>
+      <text>彩票种类</text>
+    </view>
+    <view class='ul'>
+      <block wx:for='{{ ticket }}' wx:key='{{ index }}'>
+        <view class='item' bindtap='goPage' data-id='{{ item.id }}'>
+          {{ item.name }}
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

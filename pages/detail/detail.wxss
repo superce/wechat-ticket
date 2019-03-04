@@ -1,1 +1,21 @@
 /* pages/detail/detail.wxss */
+.detail{
+  width: 700rpx;margin: 0 auto;
+}
+.detail .item {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.detail .item view{
+  display: block;
+  margin: 30rpx 0;
+  width: 60rpx;height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 36rpx;
+  background: #A52A2A;
+  border-radius: 50%;
+}

@@ -1,2 +1,12 @@
 <!--pages/detail/detail.wxml-->
-<text>{{ nameId }}</text>
+<view class='detail'>
+  <block wx:for="{{ nameId }}" wx:key='{{ index }}'>
+    <view class='item'>
+      <block wx:for="{{ item.opencode }}" wx:key="{{ index }}">
+        <view>
+          {{ item }}
+        </view>
+      </block>
+    </view>
+  </block>
+</view>

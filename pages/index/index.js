@@ -14,13 +14,15 @@ Page({
     interval: 5000,
     duration: 1000,
     ticket: [
-      { id: 'ssq', name: '双色球' },
-      { id: 'dlt', name: '大乐透' },
       { id: 'fc3d', name: '福彩3D' },
       { id: 'pl3', name: '排列3' },
       { id: 'pl5', name: '排列5' },
       { id: 'qlc', name: '七乐彩' },
-      { id: 'qxc', name: '七星彩' }
+      { id: 'qxc', name: '七星彩' },
+      { id: 'zcjqc', name: '四场进球彩' },
+      { id: 'zcsfc', name: '十四场胜负彩(任9)' },
+      { id: 'ah11x5', name: '安徽11选5 - 高频' },
+      { id: 'zcbqc', name: '六场半全场' }
     ]
   },
   goPage(e){
@@ -29,5 +31,8 @@ Page({
     wx.navigateTo({
       url: `../detail/detail?id=${nameId}`,
     })
+  },
+  h(){
+    wx.createCameraContext()
   }
 })
